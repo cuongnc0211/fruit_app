@@ -14,7 +14,7 @@ class Api::V1::FruitsController < ApplicationController
 
   def update
     fruit = Fruit.find(params[:id])
-    fruit.update_attributes(fruit_params)
+    fruit.update(fruit_params)
     render json: fruit
   end
 
